@@ -136,7 +136,7 @@ For my first milestone I built the robot, wired it and had it move in a pattern 
 
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
-![table](Screenshot-2025-06-23-at-9.38.47 AM (2) (1).jpg)
+![table r3](Screenshot-2025-06-23-at-9.38.47 AM (2) (1).jpg)
 
 # Code: Milestone 1
 
