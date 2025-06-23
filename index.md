@@ -27,6 +27,10 @@ For your final milestone, explain the outcome of your project. Key details to in
 - A summary of key topics you learned about
 - What you hope to learn in the future after everything you've learned at BSE
 
+# Schematics 
+Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+![diagram](Screenshot 2025-06-23 at 9.02.21 AM.jpeg)
+
 
 
 # Second Milestone: Obstacle Avoidance 
@@ -34,6 +38,10 @@ For your final milestone, explain the outcome of your project. Key details to in
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_iu2N_n0sqk?si=byBmCuGjmf6qJCBC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 During my second milestone I enabled my robot to avoid obstacles, speed up, and follow a line. I did this by programing the obstacle detection modules to react to obstacles by turning or going backwards. Something that has been surprising me so far is that tuning for sensors and speed calibration matters a lot. I initially thought that tuning was not essential bu an add on, and I have come to realise how important it is through this project. I am also improving a lot at coding C++ and the syntax comes to me way more easily. Before my final milestone I will integrate an ultrasonic sensor and combine it with the obstacle avoidance sensors to better the robot's obstacle detection range.   
+
+# Schematics 
+Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+![diagram](Screenshot 2025-06-23 at 9.02.21 AM.jpeg)
 
 # Code: Milestone 2
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
@@ -125,6 +133,10 @@ void backRight(int speed) {
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2YxpKuMM09s?si=skTVSiYsiE41MFWd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 For my first milestone I built the robot, wired it and had it move in a pattern by coding it. The key components in this step were the R3 board, motor driver, motors and batteries. One of the challenges I am facing and solving is coding with C++. I am looking for example code and looking through explanations of certain methods specific to arduino to better understand the language and how to use it with arduino. To complete my next milestone I will work on speed calibration for the wheels, having the robot be able to follow a line, and I will intergrate obstacle avoidance.
+
+# Schematics 
+Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+![diagram](Screenshot 2025-06-23 at 9.02.21 AM.jpeg)
 
 # Code: Milestone 1
 
