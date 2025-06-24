@@ -5,8 +5,7 @@ My project is a human following robot which you can guide with your hand. It is 
 |:--:|:--:|:--:|:--:|
 | Selin A | Castilleja School | Computer Science | Incoming Sophomore
 
-<!--![me with my project](IMG_9664.jpg)-->
-<img src="IMG_9664.jpg" width=50% height=50%>
+<img src="IMG_9664.jpg" width=30% height=30%>
 
 # Final Milestone: Follow My Hand
 
