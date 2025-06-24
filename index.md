@@ -5,8 +5,9 @@ My project is a human following robot which you can guide with your hand. It is 
 |:--:|:--:|:--:|:--:|
 | Selin A | Castilleja School | Computer Science | Incoming Sophomore
 
-![me with my project](IMG_9664.jpg)
-  
+<!--![me with my project](IMG_9664.jpg)-->
+<img src="IMG_9664.jpg" width=50% height=50%>
+
 # Final Milestone: Follow My Hand
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fLGkoQLpLuw?si=jn8Tg9b22Up2sFGG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
