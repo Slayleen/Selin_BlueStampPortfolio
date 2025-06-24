@@ -1,12 +1,6 @@
 # Human Following Robot
 My project is a human following robot which you can guide with your hand. It is coded with C++ and uses arduino technology. It can act as a cute pet like a dog or cat but it doesn't shed!
 
-You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
-
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Selin A | Castilleja School | Computer Science | Incoming Sophomore
@@ -315,22 +309,21 @@ void stopMove() {
   digitalWrite(B_1A, LOW);
 }
 ```
-# Starter Project: Jitterbug
-
-For my starter project I descided to create a jitterbug that vibrates and moves around. When I first started this project I didn't know how to solder and messed up my first attempt due to soldering issues. On my second attempt the wires of the vibrating part snapped as I attempted to strip them with the wire stripper and I had to restart again. On my third attempt I used my fingernails to strip the wires and finally got my project to work. This project not only taught me how to solder but also how to be patient and resilient. Now I have a cute jitterbug to accompany me!
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JhHHQ0n6k4w?si=2fVn5PZZqOwm9zfP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-# Schematics 
-![diagram](Screenshot 2025-06-23 at 9.02.21 AM.jpeg)
-
-
 # Bill of Materials
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
 | SunFounder 3 in 1 Starter Kit for Arduino Uno R3 | Kit to build this robot | $69.99 | <a href="[https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.sunfounder.com/products/sunfounder-3-in-1-iot-smart-car-learning-ultimate-starter-kit?_pos=1&_sid=89e5bf9b4&_ss=r)"> Link </a> |
+
+# Starter Project: Jitterbug
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JhHHQ0n6k4w?si=2fVn5PZZqOwm9zfP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+For my starter project I descided to create a jitterbug that vibrates and moves around. When I first started this project I didn't know how to solder and messed up my first attempt due to soldering issues. On my second attempt the wires of the vibrating part snapped as I attempted to strip them with the wire stripper and I had to restart again. On my third attempt I used my fingernails to strip the wires and finally got my project to work. This project not only taught me how to solder but also how to be patient and resilient. Now I have a cute jitterbug to accompany me!
+
+
+# Schematics 
+![diagram](Screenshot 2025-06-23 at 9.02.21 AM.jpeg)
 
 <!--# Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
