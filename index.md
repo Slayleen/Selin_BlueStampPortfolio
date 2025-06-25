@@ -18,7 +18,7 @@ much about wiring and had not written code for arduino or any code in C++ before
 <!--![table ultrasonic](Screenshot 2025-06-23 at 9.39.45 AM.jpg)-->
 <img src="Screenshot 2025-06-23 at 9.39.45 AM.jpg" style="width:70%; height:70%;">
 <!--![robot diagram](Screenshot 2025-06-23 at 9.39.53 AM.jpg)-->
-<img src="Screenshot 2025-06-23 at 9.39.53 AM.jpg" style="width:50%; height:50%;">
+<img src="Screenshot 2025-06-23 at 9.39.53 AM.jpg" style="width:60%; height:60%;">
 
 # Code: Final Milestone
 
@@ -232,8 +232,11 @@ void backRight(int speed) {
 For my first milestone I built the robot, wired it and had it move in a pattern by coding it. The key components in this step were the R3 board, motor driver, motors and batteries. One of the challenges I am facing and solving is coding with C++. I am looking for example code and looking through explanations of certain methods specific to arduino to better understand the language and how to use it with arduino. To complete my next milestone I will work on speed calibration for the wheels, having the robot be able to follow a line, and I will intergrate obstacle avoidance.
 
 # Schematics: Milestone 1
-![table r3](Screenshot-2025-06-23-at-9.38.47 AM (2) (1).jpg)
-![robot diagram](Screenshot 2025-06-23 at 9.38.59 AM.jpg)
+<!--![table r3](Screenshot-2025-06-23-at-9.38.47 AM (2) (1).jpg)-->
+<img src="Screenshot-2025-06-23-at-9.38.47 AM (2) (1).jpg" style="width:50%; height:50%;">
+<!--![robot diagram](Screenshot 2025-06-23 at 9.38.59 AM.jpg)-->
+<img src="Screenshot-2025-06-23-at-9.38.47 AM (2) (1).jpg" style="width:50%; height:50%;">
+
 
 # Code: Milestone 1
 
