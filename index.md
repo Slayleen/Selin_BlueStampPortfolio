@@ -1,5 +1,5 @@
 # Human Following Robot
-My project is a human following robot which you can guide with your hand. It is coded with C++ and uses arduino technology. It can act as a cute pet like a dog or cat but it doesn't shed!
+My project is a human following robot which you can guide with your hand. It is coded with C++ and uses arduino technology. Some of the technical hardware includes an R3 board, an ultrasonic sensor, obstacle detection sensors, motors, a motor driver and a 9V battery. This robot can act as a cute pet like a dog or cat but it doesn't shed!
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
