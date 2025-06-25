@@ -18,7 +18,7 @@ much about wiring and had not written code for arduino or any code in C++ before
 <!--![table ultrasonic](Screenshot 2025-06-23 at 9.39.45 AM.jpg)-->
 <img src="Screenshot 2025-06-23 at 9.39.45 AM.jpg" style="width:70%; height:70%;">
 <!--![robot diagram](Screenshot 2025-06-23 at 9.39.53 AM.jpg)-->
-<img src="Screenshot 2025-06-23 at 9.39.53 AM.jpg" style="width:60%; height:60%;">
+<img src="Screenshot 2025-06-23 at 9.38.59 AM.jpg" style="width:60%; height:60%;">
 
 # Code: Final Milestone
 
