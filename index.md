@@ -139,7 +139,7 @@ During my second milestone I enabled my robot to avoid obstacles, speed up, and 
 <!--![table](Screenshot 2025-06-23 at 9.39.14 AM.jpg)-->
 <img src="Screenshot 2025-06-23 at 9.39.14 AM.jpg" style="width:50%; height:50%;">
 <!--![robot wiring](Screenshot 2025-06-23 at 9.39.26 AM.jpg)-->
-<img src="Screenshot 2025-06-23 at 9.39.26 AM.jpg" style="width:50%; height:50%;">
+<img src="Screenshot 2025-06-23 at 9.39.26 AM.jpg" style="width:60%; height:60%;">
 
 # Code: Milestone 2
 
