@@ -235,7 +235,7 @@ For my first milestone I built the robot, wired it and had it move in a pattern 
 <!--![table r3](Screenshot-2025-06-23-at-9.38.47 AM (2) (1).jpg)-->
 <img src="Screenshot-2025-06-23-at-9.38.47 AM (2) (1).jpg" style="width:50%; height:50%;">
 <!--![robot diagram](Screenshot 2025-06-23 at 9.38.59 AM.jpg)-->
-<img src="Screenshot-2025-06-23-at-9.38.47 AM (2) (1).jpg" style="width:50%; height:50%;">
+<img src="slidufeufi.jpg" style="width:50%; height:50%;">
 
 
 # Code: Milestone 1
