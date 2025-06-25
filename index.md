@@ -15,8 +15,10 @@ With this milestone I am now able to guide my robot with my hand. My biggest cha
 much about wiring and had not written code for arduino or any code in C++ before. Throughout this experience I have learned a lot about coding, arduinos and different kinds of sensors. I also learned about problemsolving, being resourceful and being patient. In the future I hope to learn more programming languages, dive into AI and create more fun projects.
 
 # Schematics: Final Milestone 
-![table ultrasonic](Screenshot 2025-06-23 at 9.39.45 AM.jpg)
-![robot diagram](Screenshot 2025-06-23 at 9.39.53 AM.jpg)
+<!--![table ultrasonic](Screenshot 2025-06-23 at 9.39.45 AM.jpg)-->
+<img src="Screenshot 2025-06-23 at 9.39.45 AM.jpg" style="width:50%; height:50%;">
+<!--![robot diagram](Screenshot 2025-06-23 at 9.39.53 AM.jpg)-->
+<img src="Screenshot 2025-06-23 at 9.39.53 AM.jpg" style="width:50%; height:50%;">
 
 # Code: Final Milestone
 
