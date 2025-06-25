@@ -136,8 +136,10 @@ void stopMove() {
 During my second milestone I enabled my robot to avoid obstacles, speed up, and follow a line. I did this by programing the obstacle detection modules to react to obstacles by turning or going backwards. Something that has been surprising me so far is that tuning for sensors and speed calibration matters a lot. I initially thought that tuning was not essential bu an add on, and I have come to realise how important it is through this project. I am also improving a lot at coding C++ and the syntax comes to me way more easily. Before my final milestone I will integrate an ultrasonic sensor and combine it with the obstacle avoidance sensors to better the robot's obstacle detection range.   
 
 # Schematics: Milestone 2 
-![table](Screenshot 2025-06-23 at 9.39.14 AM.jpg)
-![robot wiring](Screenshot 2025-06-23 at 9.39.26 AM.jpg)
+<!--![table](Screenshot 2025-06-23 at 9.39.14 AM.jpg)-->
+<img src="Screenshot 2025-06-23 at 9.39.14 AM.jpg" style="width:50%; height:50%;">
+<!--![robot wiring](Screenshot 2025-06-23 at 9.39.26 AM.jpg)-->
+<img src="Screenshot 2025-06-23 at 9.39.26 AM.jpg" style="width:50%; height:50%;">
 
 # Code: Milestone 2
 
