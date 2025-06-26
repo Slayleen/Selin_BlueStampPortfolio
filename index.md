@@ -23,15 +23,16 @@ much about wiring and had not written code for arduino or any code in C++ before
 # Code: Final Milestone
 
 ```c++
-#include <EEPROM.h>
+#include <Wire.h>
+#include <MPU6050.h>
 
+MPU6050 mpu;
+
+// Motor pins
 const int A_1B = 5;
 const int A_1A = 6;
 const int B_1B = 9;
 const int B_1A = 10;
-
-float leftOffset = 1.0;
-float rightOffset = 1.0;
 
 const int rightIR=7;
 const int leftIR=8;
@@ -39,46 +40,14 @@ const int leftIR=8;
 const int trigPin = 3;
 const int echoPin = 4;
 
-void setup() {
-  Serial.begin(9600);
 
-  //motor
-  pinMode(A_1B, OUTPUT);
-  pinMode(A_1A, OUTPUT);
-  pinMode(B_1B, OUTPUT);
-  pinMode(B_1A, OUTPUT);
-  EEPROM.write(0, 87); //write the offset to the left motor
-  EEPROM.write(1, 100); //write the offset to the right motor
-  leftOffset = EEPROM.read(0) * 0.01; //read the offset
-  rightOffset = EEPROM.read(1) * 0.01;//read the offset
 
-  //IR obstacle
-  pinMode(leftIR,INPUT);
-  pinMode(rightIR,INPUT);
-  
-  //ultrasonic module
-  pinMode(echoPin, INPUT);
-  pinMode(trigPin, OUTPUT);
-}
+int baseSpeed = 250;           // Base motor speed
+float correctionFactor = 60;  // How strongly to correct based on angle
+float angleThreshold = 1.5;    // Degrees threshold for correction
 
-void loop() {
-
-  float distance = readSensorData();
-
-  int left = digitalRead(leftIR);  // 0: Obstructed   1: Empty
-  int right = digitalRead(rightIR);
-  int speed = 150;
-
-  if (distance>5 && distance<10){
-    moveForward(speed);
-  }else if(!left&&right){
-    turnLeft(speed);
-  }else if(left&&!right){
-    turnRight(speed);
-  }else{
-    stopMove();
-  }
-}
+unsigned long lastTime = 0;
+float zAngle = 0; // Yaw angle in degrees
 
 float readSensorData() {
   digitalWrite(trigPin, LOW);
@@ -90,39 +59,131 @@ float readSensorData() {
   return distance;
 }
 
-void moveForward(int speed) {
-  analogWrite(A_1B, 0);
-  analogWrite(A_1A, int(speed * rightOffset));
-  analogWrite(B_1B, int(speed * leftOffset));
+
+void moveForward(int leftSpeed, int rightSpeed) {
+   // Drive forward
+    analogWrite(A_1A, rightSpeed);
+    analogWrite(A_1B, 0);
+    analogWrite(B_1A, 0);
+    analogWrite(B_1B, leftSpeed);
+}
+
+void stopMoving() {
+   // stop moving
+    analogWrite(A_1A, 0);
+    analogWrite(A_1B, 0);
+    analogWrite(B_1A, 0);
+    analogWrite(B_1B, 0);
+}
+
+void turnRight(int rightSpeed, int leftSpeed) {
+  analogWrite(A_1B, rightSpeed);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, leftSpeed);
   analogWrite(B_1A, 0);
 }
 
-void moveBackward(int speed) {
-  analogWrite(A_1B, int(speed * rightOffset));
-  analogWrite(A_1A, 0);
-  analogWrite(B_1B, 0);
-  analogWrite(B_1A, int(speed * leftOffset));
-}
-
-void turnRight(int speed) {
-  analogWrite(A_1B, int(speed * rightOffset));
-  analogWrite(A_1A, 0);
-  analogWrite(B_1B, int(speed * leftOffset));
-  analogWrite(B_1A, 0);
-}
-
-void turnLeft(int speed) {
+void turnLeft(int rightSpeed, int leftSpeed) {
   analogWrite(A_1B, 0);
-  analogWrite(A_1A, int(speed * rightOffset));
+  analogWrite(A_1A, rightSpeed);
   analogWrite(B_1B, 0);
-  analogWrite(B_1A, int(speed * leftOffset));
+  analogWrite(B_1A, leftSpeed);
 }
 
-void stopMove() {
-  analogWrite(A_1B, 0);
-  analogWrite(A_1A, 0);
-  analogWrite(B_1B, 0);
-  analogWrite(B_1A, 0);
+void setup() {
+  Serial.begin(9600);
+
+  // Motor pins as output
+  pinMode(A_1A, OUTPUT);
+  pinMode(A_1B, OUTPUT);
+  pinMode(B_1A, OUTPUT);
+  pinMode(B_1B, OUTPUT);
+
+    //IR obstacle
+  pinMode(leftIR,INPUT);
+  pinMode(rightIR,INPUT);
+
+  //ultrasonic
+  pinMode(echoPin, INPUT);
+  pinMode(trigPin, OUTPUT);
+
+  // Initialize MPU6050
+  Wire.begin();
+  mpu.initialize();
+
+  if (!mpu.testConnection()) {
+    Serial.println("MPU6050 connection failed!");
+    while (1);
+  }
+
+  Serial.println("MPU6050 ready!");
+  lastTime = millis();
+}
+
+void loop() {
+  int16_t gx, gy, gz;
+  mpu.getRotation(&gx, &gy, &gz);
+
+  // Convert gyro Z axis to degrees per second (yaw rate)
+  float gz_dps = gz / 131.0;
+
+  // Calculate time elapsed
+  unsigned long now = millis();
+  float dt = (now - lastTime) / 1000.0; // seconds
+  lastTime = now;
+
+  // Integrate gyro rate to get angle
+  zAngle += gz_dps * dt;
+
+  // Default speeds
+  int leftSpeed = baseSpeed -30;
+  int rightSpeed = baseSpeed;
+
+  // Correction logic based on angle
+  if (zAngle > angleThreshold) {
+    // Robot has turned right too much, slow right motor to correct left
+    leftSpeed -= correctionFactor * abs(zAngle);
+  } else if (zAngle < -angleThreshold) {
+    // Robot has turned left too much, slow left motor to correct right
+    rightSpeed -= correctionFactor * abs(zAngle);
+  }
+
+  // Constrain speeds to 0–255
+  leftSpeed = constrain(leftSpeed, 0, 255);
+  rightSpeed = constrain(rightSpeed, 0, 255);
+
+  float distance = readSensorData();
+  Serial.println(distance);
+
+  int left = digitalRead(leftIR);  // 0: Obstructed   1: Empty
+  int right = digitalRead(rightIR);
+
+  if (distance>2 && distance<30) {
+    moveForward(leftSpeed, rightSpeed);
+  }else if(!left&&right){
+    turnLeft(leftSpeed, rightSpeed);
+  }else if(left&&!right){
+    turnRight(leftSpeed, rightSpeed);
+  } else {
+    stopMoving();
+    resetYaw();
+  }
+
+    Serial.print("Yaw angle: ");
+    Serial.print(zAngle);
+    Serial.print(" | L: ");
+    Serial.print(leftSpeed);
+    Serial.print(" R: ");
+    Serial.println(rightSpeed);
+
+  // delay(10);
+}
+
+void resetYaw() {
+  if (abs(zAngle) > angleThreshold) {
+    zAngle = 0;
+    lastTime = millis();
+  }
 }
 
 ```
