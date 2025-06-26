@@ -11,7 +11,7 @@ My project is a human following robot which you can guide with your hand. It is 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fLGkoQLpLuw?si=jn8Tg9b22Up2sFGG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-With this milestone I am now able to guide my robot with my hand. My biggest challenges at BSE were coding and wiring sice I didn't know 
+With this milestone I am now able to guide my robot with my hand. My biggest challenges at BSE were coding and wiring since I didn't know 
 much about wiring and had not written code for arduino or any code in C++ before. Throughout this experience I have learned a lot about coding, arduinos and different kinds of sensors. I also learned about problemsolving, being resourceful and being patient. In the future I hope to learn more programming languages, dive into AI and create more fun projects.
 
 # Schematics: Final Milestone 
