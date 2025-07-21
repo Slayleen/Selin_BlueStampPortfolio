@@ -1,3 +1,2 @@
-[//]: # (theme: jekyll-theme-cayman)
-remote_theme: Ice bear
+theme: jekyll-theme-architect
 markdown: kramdown
